@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" metadata-complete="true" version="3.1">
+  <servlet>
+    <servlet-name>Hello</servlet-name>
+    <servlet-class>tw.org.iii.home.Hello</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Hello</servlet-name>
+    <url-pattern>/Hello</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Home01</servlet-name>
+    <servlet-class>tw.org.iii.home.Home01</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Home01</servlet-name>
+    <url-pattern>/Home01</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Home02</servlet-name>
+    <servlet-class>tw.org.iii.home.Home02</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Home02</servlet-name>
+    <url-pattern>/Home02</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Home03</servlet-name>
+    <servlet-class>tw.org.iii.home.Home03</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Home03</servlet-name>
+    <url-pattern>/Home03</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Home04</servlet-name>
+    <servlet-class>tw.org.iii.home.Home04</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Home04</servlet-name>
+    <url-pattern>/Home04</url-pattern>
+  </servlet-mapping>  
+</web-app>
