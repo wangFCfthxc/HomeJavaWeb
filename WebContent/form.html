@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="SQLconn.jsp" method="post" onsubmit="return func(this)">
+
+		手機號碼：<input type="text" name="tel"
+			onkeyup="this.value=this.value.replace(/[^\d]/g,'')"
+			placeholder="ex:09..."><span id="mesg"></span> <br /> 出生年月日<br />
+		年：<select id="years" name="years"></select> 月：<select id="months"
+			name="months"></select> 日：<select id="days" name="days"></select>
+		<script type="text/javascript" src="js/month.js"></script>
+
+		<br /> <br /> <input type="submit" value="送  出">
+	</form>
+</body>
+</html>

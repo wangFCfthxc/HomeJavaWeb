@@ -21,8 +21,14 @@ public class Home04 extends HttpServlet {
 		// 取得Servlet Context
 		ServletContext sc = getServletContext();
 		// 轉交請求
-//		if(carname.length() != 0){
-			if(carname != null){	
+		
+		
+		
+		if(carname.length() != 0){
+//			if(carname != null){
+				
+				
+				
 			sc.getRequestDispatcher("/thanks.html").forward(request, response);
 		}
 		else{

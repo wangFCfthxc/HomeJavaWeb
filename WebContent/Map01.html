@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>旗艦店</title>
+<!-- bootstrap version 3.3.1  -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/Map_infoNav.css" rel="stylesheet">
+<link href="css/infoCarousel.css" rel="stylesheet">
+<link href="css/context.css" rel="stylesheet">
+<link href="css/footer.css" rel="stylesheet">
+</head>
+<body>
+	<!-- navbar================================================== -->
+	<div class="navbar-wrapper">
+		<div class="container">
+
+			<nav class="navbar navbar-inverse navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed"
+							data-toggle="collapse" data-target="#navbar"
+							aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">KTV</a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="judgeRegistration.jsp">會員中心</a></li>
+							<li><a href="#">線上訂位</a></li>
+							<li><a href="#">手機點歌</a></li>
+							<li><a href="#">地址、電話</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>登
+									入</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+		</div>
+	</div>
+	<!-- navbar================================================== -->
+	<!-- 門市資訊-------------------------------------------------- -->
+	<div class="col-sm-12">
+		<div class="col-sm-6">
+			<div id="googleMap"
+				style="width: 100%; height: 400px; background: yellow"></div>
+		</div>
+		<br>
+		<div class="col-sm-6">
+			<div align="center">
+				<img src="img/Store1.jpg" style="width: 50%; height: 50%" /><br>
+				<!-- Single button -->
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						門市資訊 <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="Map01.html">旗艦店</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="Map02.html">逢甲店</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="Map03.html">梧棲店</a></li>
+						<li role="separator" class="divider"></li>
+					</ul>
+				</div>
+
+				<!-- 門市資訊 -->
+				<h3>旗艦店</h3>
+				<p>營業時間 : 24H</p>
+				<p>
+					門市地址 : <a href="https://goo.gl/maps/K1Rnro66qx32">台中市西屯區臺灣大道三段527號</a>
+				</p>
+				<p>
+					訂位電話 : <a href="tel:0422595511">04-22595511</a>
+				</p>
+				<div class="btn-group btn-group-justified" role="group">
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default">
+							<a href="test01.html">門市價目表</a>
+						</button>
+					</div>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default">立即定位</button>
+					</div>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+	<!-- /門市資訊-------------------------------------------------- -->
+	<!-- Carousel================================================== -->
+	<div class="col-sm-12">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img class="first-slide" src="img/BigRoom1.jpg">
+			</div>
+			<div class="item">
+				<img class="second-slide" src="img/MidRoom1.jpg">
+			</div>
+			<div class="item">
+				<img class="third-slide" src="img/SmlRoom1.jpg">
+			</div>
+		</div>
+		<a class="left carousel-control" href="#myCarousel" role="button"
+			data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"
+			aria-hidden="true"></span> <span class="sr-only">Previous</span>
+		</a> <a class="right carousel-control" href="#myCarousel" role="button"
+			data-slide="next"> <span
+			class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+	</div>
+	<!-- /Carousel================================================== -->	
+	<!-- context================================================== -->
+	<!-- /context================================================== -->
+	<!-- footer================================================== -->
+	<div class="col-sm-12">
+		<div class="footer">
+			<div class="container">
+				<p class="text-muted">Place sticky footer content here.</p>
+			</div>
+		</div>
+	</div>
+	<!-- /footer================================================== -->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery-3.1.1.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Google Map -->
+	<script
+		src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyA1_s2SgBaH2YiI8v_s3GubyeTzxpSW2bE"></script>
+	<script>
+        // 建立地圖物件
+        var mapProp = {
+            center: new google.maps.LatLng(24.1692609, 120.6384089),
+            zoom: 19,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(
+            $("#googleMap")[0],
+            mapProp);
+        // 加上圖標
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(24.1692609, 120.6384089),
+            animation: google.maps.Animation.BOUNCE
+        });
+        marker.setMap(map);
+
+        var infowindow = new google.maps.InfoWindow({
+            content: "旗艦店"
+        });
+
+        infowindow.open(map, marker);
+    </script>	
+</body>
+</html>
