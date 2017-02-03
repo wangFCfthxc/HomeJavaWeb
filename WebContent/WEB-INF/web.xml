@@ -143,7 +143,66 @@
   <servlet-mapping>
     <servlet-name>UploadServlet2</servlet-name>
     <url-pattern>/UploadServlet2</url-pattern>
-  </servlet-mapping>    
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UploadServlet3</servlet-name>
+    <servlet-class>cc.openhome.UploadServlet3</servlet-class>
+    <multipart-config>
+      <location>C:/Users/panda/eclipse/jee-neon/Git/HomeJavaWeb/HomeJavaWeb/WebContent/upload/</location>
+    </multipart-config>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadServlet3</servlet-name>
+    <url-pattern>/UploadServlet3</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Dispatcher_Some</servlet-name>
+    <servlet-class>cc.openhome.Dispatcher_Some</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dispatcher_Some</servlet-name>
+    <url-pattern>/Dispatcher_Some</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Dispatcher_Other</servlet-name>
+    <servlet-class>cc.openhome.Dispatcher_Other</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dispatcher_Other</servlet-name>
+    <url-pattern>/Dispatcher_Other</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HelloController</servlet-name>
+    <servlet-class>cc.openhome.HelloController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloController</servlet-name>
+    <url-pattern>/HelloController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HelloView</servlet-name>
+    <servlet-class>cc.openhome.HelloView</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloView</servlet-name>
+    <url-pattern>/HelloView</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Pet</servlet-name>
+    <servlet-class>cc.openhome.Pet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Pet</servlet-name>
+    <url-pattern>/Pet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>OutputStream_Down</servlet-name>
+    <servlet-class>cc.openhome.OutputStream_Down</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OutputStream_Down</servlet-name>
+    <url-pattern>/OutputStream_Down</url-pattern>
+  </servlet-mapping>
   <context-param>
     <description>檔案上傳目錄</description>
     <param-name>upload-path</param-name>
