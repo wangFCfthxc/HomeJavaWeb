@@ -7,52 +7,131 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
 <!-- jQuery library -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/zh-TW.js"></script>
 <!-- Latest compiled JavaScript -->
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+	$(function() {
+		$.datepicker.setDefaults($.datepicker.regional["zh-TW"]);
+		$("#datepicker").datepicker({
+			minDate : +1,
+			maxDate : "+1M",
+			showAnim : "slideDown",
+			dateFormat : "yy-mm-dd",
+			showButtonPanel : true
+		});
+	});
+
+	$(function() {
+		$("#timePer").selectmenu()
+	});
+
+	function checkBookIn() {
+		if ($('#datepicker').val() == '') {
+			$('#meg01').html('<em>請選擇預約日期</em>');
+		} else {
+			$('#meg01').html('');
+		}
+		if ($('#timePer').val() == null) {
+			$('#meg02').html('<em>請選擇預約時間</em>');
+		} else {
+			$('#meg02').html('');
+		}
+		if ($('#num').val() == '') {
+			$('#meg03').html('<em>請填選人數</em>');
+		} else {
+			$('#meg03').html('');
+		}
+		if ($('#datepicker').val() != '' && $('#timePer').val() != null
+				&& $('#num').val() != '')
+			return true;
+		return false;
+	}
+
+	$(document).ready(function() {
+		$('[data-toggle="tooltip"]').tooltip();
+	});
+</script>
 </head>
 <body>
-<div class="container">
-  <h2>Image Gallery</h2>
-  <p>The .thumbnail class can be used to display an image gallery.</p>
-  <p>The .caption class adds proper padding and a dark grey color to text inside thumbnails.</p>
-  <p>Click on the images to enlarge them.</p>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="/w3images/lights.jpg" target="_blank">
-          <img src="img/BigRoom1.jpg" alt="Lights" style="width:100%">
-          <div class="caption">
-            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="/w3images/nature.jpg" target="_blank">
-          <img src="img/BigRoom1.jpg" alt="Nature" style="width:100%">
-          <div class="caption">
-            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="/w3images/fjords.jpg" target="_blank">
-          <img src="img/BigRoom1.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
+	<div class="container">
+		<div class="page-header">
+			<h1>
+				<span class="label label-primary">旗艦店</span>
+			</h1>
+		</div>
+		<div class="jumbotron">
+			<div class="row">
+				<h2>線上訂位</h2>
+			</div>
+			<form class="form-horizontal" method="post" action=""
+				onsubmit="return checkBookIn()">
+				<div class="form-group">
+					<div class="row">
+						<label class="control-label col-md-2" for="datepicker">預約日期：</label>
+						<div class="col-md-6">
+							<input type="text" class="form-control" id="datepicker"
+								name="calendar" data-toggle="tooltip" data-placement="top"
+								title="必選欄位"><span class="help-block" id="meg01"></span>
+						</div>
+						<div class="col-md-4"></div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="row">
+						<label class="control-label col-md-2" for="timePer">預約時間：</label>
+						<div class="col-md-6">
+							<select class="form-control" name="timePer" id="timePer"
+								data-toggle="tooltip" data-placement="top" title="必選欄位">
+								<option disabled selected>--請選擇時--</option>
+								<option value="50">00:00</option>
+								<option value="51">03:00</option>
+								<option value="52">06:00</option>
+								<option value="53">09:00</option>
+								<option value="54">12:00</option>
+								<option value="55">15:00</option>
+								<option value="56">18:00</option>
+								<option value="57">21:00</option>
+							</select><span class="help-block" id="meg02"></span>
+						</div>
+						<div class="col-md-4"></div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="row">
+						<label class="control-label col-md-2" for="num">人數:</label>
+						<div class="col-md-6">
+							<input type="number" class="form-control" name="num" id="num"
+								value="1" min="1" max="100" data-toggle="tooltip"
+								data-placement="top" title="必選欄位"><span
+								class="help-block" id="meg03"></span>
+						</div>
+						<div class="col-md-4"></div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-6">
+							<button type="submit" id="save" class="btn btn-primary btn-block">
+								<i class="material-icons">music_note</i>確認送出
+							</button>
+						</div>
+						<div class="col-md-4"></div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 </body>
 </html>
